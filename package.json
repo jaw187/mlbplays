@@ -1,0 +1,18 @@
+{
+  "name": "mlbplays",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/lab -v -p -m 20000 -L -t 100"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "code": "1.x.x",
+    "hoek": "2.x.x",
+    "insync": "1.x.x",
+    "lab": "5.x.x",
+    "wreck": "5.x.x"
+  }
+}
