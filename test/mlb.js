@@ -29,7 +29,14 @@ describe('Plays', function () {
 
         mlb.get(function (err, plays) {
 
+            expect(err).to.not.exist();
+
             expect(plays).to.exist();
+            expect(plays.length).to.exist();
+
+            expect(plays[0].previous).to.not.exist();
+            expect(plays[1].previous).to.exist();
+
             done();
         });
     });
