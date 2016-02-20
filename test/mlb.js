@@ -42,4 +42,26 @@ describe('Plays', () => {
             done();
         });
     });
+
+    it('Can get plays on day with one game', (done) => {
+
+        const options = {
+            path: 'year_2015/month_04/day_05/'
+        };
+
+        const mlb = new Mlb(options);
+
+        mlb.get((err, plays) => {
+
+            expect(err).to.not.exist();
+
+            expect(plays).to.exist();
+            expect(plays.length).to.exist();
+
+            expect(plays[0].previous).to.not.exist();
+            expect(plays[1].previous).to.exist();
+
+            done();
+        });
+    });
 });
