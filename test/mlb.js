@@ -1,33 +1,35 @@
+'use strict';
+
 // Load modules
 
-var Code = require('code');
-var Lab = require('lab');
+const Code = require('code');
+const Lab = require('lab');
 
-var Mlb = require('../');
+const Mlb = require('../lib');
 
 // Declare internals
 
-var internals = {};
+const internals = {};
 
 
 // Test shortcuts
 
-var lab = exports.lab = Lab.script();
-var describe = lab.describe;
-var it = lab.it;
-var expect = Code.expect;
+const lab = exports.lab = Lab.script();
+const describe = lab.describe;
+const it = lab.it;
+const expect = Code.expect;
 
-describe('Plays', function () {
+describe('Plays', () => {
 
-    it('Can get plays', function (done) {
+    it('Can get plays', (done) => {
 
-        var options = {
+        const options = {
             path: 'year_2011/month_07/day_23/'
         };
 
-        var mlb = new Mlb(options);
+        const mlb = new Mlb(options);
 
-        mlb.get(function (err, plays) {
+        mlb.get((err, plays) => {
 
             expect(err).to.not.exist();
 
