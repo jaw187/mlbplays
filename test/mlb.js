@@ -39,6 +39,8 @@ describe('Plays', () => {
             expect(plays[0].previous).to.not.exist();
             expect(plays[1].previous).to.exist();
 
+            expect(plays[0].game_type).to.equal('R');
+
             done();
         });
     });
