@@ -1,6 +1,6 @@
 {
   "name": "mlbplays",
-  "version": "2.1.6",
+  "version": "2.2.0",
   "description": "",
   "main": "lib/index.js",
   "scripts": {
